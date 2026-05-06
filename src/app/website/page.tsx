@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
 
 const WebsitePage = () => {
   return (
@@ -10,9 +12,16 @@ const WebsitePage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,65,225,0.05)_0%,transparent_70%)] -z-10 pointer-events-none"></div>
         <div className="max-w-305 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-8 animate-slide-up">
-            <h1 className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]">
-              Make your Business Grow with us.
-            </h1>
+            <Typewriter 
+              className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]"
+              parts={[
+                { text: "Building " },
+                { text: "Smart Websites", className: "text-secondary" },
+                { text: " for Business Growth." }
+              ]}
+            />
+
+
             <p className="text-[18px] text-on-surface-variant max-w-2xl leading-[1.6]">
               We provide custom content management systems (CMS) using WordPress, Laravel, and other frameworks, and build modern, fast, responsive websites using Angular, React, PHP, etc.
             </p>

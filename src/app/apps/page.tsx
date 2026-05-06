@@ -3,8 +3,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
 
 const AppsPage = () => {
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(4);
   const [isPaused, setIsPaused] = useState(false);
@@ -65,10 +68,16 @@ const AppsPage = () => {
       <section className="bg-[radial-gradient(circle_at_center,rgba(75,65,225,0.1)_0%,transparent_70%)] pt-12 pb-24 px-8">
         <div className="max-w-305 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-slide-up">
-            <h1 className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]">
-              Android/iOS App <br/>
-              <span className="text-secondary">Solutions.</span>
-            </h1>
+            <Typewriter 
+              className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em] mb-6"
+              parts={[
+                { text: "Building " },
+                { text: "Smart Apps", className: "text-secondary" },
+                { text: " for Business Growth." }
+              ]}
+            />
+
+
             <p className="text-[18px] text-on-surface-variant max-w-lg leading-[1.6]">
               We create high-quality cross-platform and native mobile applications using Flutter for Android & iOS. Our apps are optimized for speed, performance, and scalability.
             </p>

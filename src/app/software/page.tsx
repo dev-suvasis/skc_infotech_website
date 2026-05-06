@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
 
 const SoftwarePage = () => {
   return (
@@ -10,9 +12,16 @@ const SoftwarePage = () => {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(75,65,225,0.05)_0%,transparent_70%)] -z-10"></div>
         <div className="max-w-305 mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1 animate-slide-up">
-            <h1 className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em] mb-6">
-              Building Smart Software for Business Growth.
-            </h1>
+            <Typewriter 
+              className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em] mb-6"
+              parts={[
+                { text: "Building " },
+                { text: "Smart Software", className: "text-secondary" },
+                { text: " for Business Growth." }
+              ]}
+            />
+
+
             <p className="text-[18px] text-on-surface-variant mb-8 max-w-2xl leading-[1.6]">
               Make your business grow with us. We engineer the infrastructure and applications that power tomorrow's industry leaders.
             </p>

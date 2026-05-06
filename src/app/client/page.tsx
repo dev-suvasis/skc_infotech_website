@@ -1,17 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
+
+import Counter from '@/components/Counter';
 
 const ClientPage = () => {
+
   return (
     <div className="flex flex-col w-full animate-fade-in">
       {/* Hero Section */}
       <section className="pt-12 pb-24 px-8 relative">
         <div className="max-w-305 mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 flex flex-col space-y-6 animate-slide-up">
-            <h1 className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]">
-              Client Success Stories
-            </h1>
+            <Typewriter 
+              className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]"
+              parts={[
+                { text: "Building " },
+                { text: "Success Stories", className: "text-secondary" },
+                { text: " for Business Growth." }
+              ]}
+            />
+
+
             <p className="text-[18px] text-on-surface-variant max-w-lg leading-[1.6]">
               Discover how SKC Infotech helps businesses grow with custom software, websites, and mobile applications tailored to their unique needs.
             </p>
@@ -97,7 +109,10 @@ const ClientPage = () => {
                 <p className="text-[14px] text-on-surface-variant leading-[1.6]">We provide custom content management systems and web applications tailored to your business needs.</p>
               </div>
               <div className="mt-6 flex items-center justify-between border-t border-outline-variant/20 pt-4">
-                <div className="text-[32px] font-bold text-secondary">35+</div>
+                <div className="text-[32px] font-bold text-secondary">
+                  <Counter end={35} suffix="+" />
+                </div>
+
                 <div className="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Software Projects</div>
               </div>
             </div>
@@ -113,7 +128,10 @@ const ClientPage = () => {
                 <p className="text-[14px] text-slate-300 leading-[1.6]">High-quality cross-platform and native mobile applications optimized for speed and performance.</p>
               </div>
               <div className="mt-6 flex items-center justify-between border-t border-white/20 pt-4 relative z-10">
-                <div className="text-[32px] font-bold text-white">105+</div>
+                <div className="text-[32px] font-bold text-white">
+                  <Counter end={105} suffix="+" />
+                </div>
+
                 <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Apps Delivered</div>
               </div>
             </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
 
 const ContactPage = () => {
   return (
@@ -7,7 +9,16 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="pt-12 pb-16 px-8 text-center animate-slide-up">
         <div className="max-w-305 mx-auto">
-          <h1 className="text-[64px] font-bold text-on-background mb-6 leading-[1.1] tracking-[-0.02em]">Get in Touch</h1>
+          <Typewriter 
+            className="text-[64px] font-bold text-on-background mb-6 leading-[1.1] tracking-[-0.02em]"
+            parts={[
+              { text: "Building " },
+              { text: "Smart Connections", className: "text-secondary" },
+              { text: " for Business Growth." }
+            ]}
+          />
+
+
           <p className="text-[18px] text-on-surface-variant max-w-2xl mx-auto leading-[1.6]">
             Whether you have a question about features, pricing, need a demo, or anything else, our team is ready to answer all your questions.
           </p>

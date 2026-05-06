@@ -1,5 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
 
 const CareerPage = () => {
   return (
@@ -8,9 +10,16 @@ const CareerPage = () => {
       <section className="pt-12 pb-24 px-8 relative overflow-hidden">
         <div className="max-w-305 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col gap-6 animate-slide-up">
-            <h1 className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]">
-              Shape the Future of Enterprise IT
-            </h1>
+            <Typewriter 
+              className="text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]"
+              parts={[
+                { text: "Building " },
+                { text: "Future Careers", className: "text-secondary" },
+                { text: " for Business Growth." }
+              ]}
+            />
+
+
             <p className="text-[18px] text-on-surface-variant max-w-2xl leading-[1.6]">
               Join a team of visionaries and problem solvers. At SKC Infotech, we build the robust, scalable systems that power tomorrow's leading organizations.
             </p>

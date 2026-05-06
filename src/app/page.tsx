@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import DynamicTypewriter from '@/components/DynamicTypewriter';
 
 const HomePage = () => {
   return (
@@ -8,9 +9,15 @@ const HomePage = () => {
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center min-h-179 max-w-7xl mx-auto px-8 py-12">
         <div className="lg:col-span-6 flex flex-col gap-8 animate-slide-up">
-          <h1 className="font-display text-5xl lg:text-7xl font-bold text-on-background leading-tight">
-            Building <span className="text-secondary block">Smart Software</span> for Business Growth
-          </h1>
+          <DynamicTypewriter 
+            className="font-display text-[64px] font-bold text-on-background leading-tight"
+            prefix="Building"
+            words={["Smart Softwares", "Smart Solutions", "Smart Connects", "Success Stories"]}
+            suffix="for Business Growth."
+            highlightClass="text-secondary block"
+          />
+
+
           <p className="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed">
             SKC Infotech: App, Software and Website Development. Make your business grow with us.
           </p>

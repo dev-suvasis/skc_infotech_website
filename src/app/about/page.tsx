@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Typewriter from '@/components/Typewriter';
+
+
 
 const AboutPage = () => {
   return (
@@ -12,9 +15,16 @@ const AboutPage = () => {
             <span className="inline-block py-1.5 px-3 rounded-full bg-surface-container-high text-on-surface-variant text-[14px] font-semibold border border-outline-variant/30 backdrop-blur-md font-sans">
               Our Profile
             </span>
-            <h1 className="font-display text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]">
-              Trusted <span className="text-secondary">Software</span> Solutions.
-            </h1>
+            <Typewriter 
+              className="font-display text-[64px] font-bold text-on-background leading-[1.1] tracking-[-0.02em]"
+              parts={[
+                { text: "Building " },
+                { text: "Smart Solutions", className: "text-secondary" },
+                { text: " for Business Growth." }
+              ]}
+            />
+
+
             <p className="font-body text-[18px] text-on-surface-variant max-w-xl leading-[1.6]">
               Developing Mobile Friendly Websites & Fully customized Web Application with the latest technology and trends in the market. Founded in 1997, we are a trusted software solutions company with over two decades of expertise in delivering cutting-edge digital solutions.
             </p>
