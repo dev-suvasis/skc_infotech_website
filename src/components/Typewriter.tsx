@@ -21,7 +21,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ parts, className = "", delay = 
   useEffect(() => {
     if (currentPartIndex < parts.length) {
       const currentPart = parts[currentPartIndex];
-      if (currentCharIndex < currentPart.text.length) {
+      if (currentPart && currentCharIndex < currentPart.text.length) {
         const timeout = setTimeout(() => {
           setCurrentCharIndex(prev => prev + 1);
         }, delay);
@@ -35,6 +35,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ parts, className = "", delay = 
         return () => clearTimeout(timeout);
       }
     } else {
+
       setIsComplete(true);
     }
   }, [currentPartIndex, currentCharIndex, parts, delay]);

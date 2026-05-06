@@ -43,7 +43,7 @@ const DynamicTypewriter: React.FC<DynamicTypewriterProps> = ({
       }
     } else if (phase === 'typingFirstWord') {
       const fullWord = words[0];
-      if (currentWord.length < fullWord.length) {
+      if (fullWord && currentWord.length < fullWord.length) {
         timer = setTimeout(() => {
           setCurrentWord(fullWord.slice(0, currentWord.length + 1));
         }, typingDelay);
@@ -61,7 +61,7 @@ const DynamicTypewriter: React.FC<DynamicTypewriterProps> = ({
     } else if (phase === 'looping') {
       const fullWord = words[currentWordIndex];
       
-      if (!isDeleting) {
+      if (fullWord && !isDeleting) {
         if (currentWord.length < fullWord.length) {
           timer = setTimeout(() => {
             setCurrentWord(fullWord.slice(0, currentWord.length + 1));
@@ -69,7 +69,7 @@ const DynamicTypewriter: React.FC<DynamicTypewriterProps> = ({
         } else {
           timer = setTimeout(() => setIsDeleting(true), newWordDelay);
         }
-      } else {
+      } else if (fullWord && isDeleting) {
         if (currentWord.length > 0) {
           timer = setTimeout(() => {
             setCurrentWord(fullWord.slice(0, currentWord.length - 1));
@@ -80,6 +80,7 @@ const DynamicTypewriter: React.FC<DynamicTypewriterProps> = ({
         }
       }
     }
+
 
     return () => clearTimeout(timer);
   }, [prefixText, suffixText, currentWord, isDeleting, currentWordIndex, phase, prefix, suffix, words, typingDelay, erasingDelay, newWordDelay]);
