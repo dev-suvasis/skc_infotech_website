@@ -16,10 +16,12 @@ const Counter: React.FC<CounterProps> = ({ end, duration = 2000, suffix = "" }) 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        const entry = entries[0];
+        if (entry && entry.isIntersecting) {
           setHasStarted(true);
         }
       },
+
       { threshold: 0.1 }
     );
 
