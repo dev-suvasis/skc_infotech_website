@@ -2,6 +2,21 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import DynamicTypewriter from '@/components/DynamicTypewriter';
+import { FaArrowRight, FaTerminal, FaMobileAlt, FaShoppingCart, FaServer, FaTools, FaGlobe } from 'react-icons/fa';
+import { MdWeb, MdDashboard, MdDesignServices } from 'react-icons/md';
+import { TbApi } from 'react-icons/tb';
+
+const iconMap: Record<string, React.ReactNode> = {
+  terminal: <FaTerminal className="text-secondary text-3xl" />,
+  web: <MdWeb className="text-secondary text-3xl" />,
+  smartphone: <FaMobileAlt className="text-secondary text-3xl" />,
+  dashboard_customize: <MdDashboard className="text-secondary text-3xl" />,
+  shopping_cart: <FaShoppingCart className="text-secondary text-3xl" />,
+  design_services: <MdDesignServices className="text-secondary text-3xl" />,
+  api: <TbApi className="text-secondary text-3xl" />,
+  dns: <FaServer className="text-secondary text-3xl" />,
+  build: <FaTools className="text-secondary text-3xl" />,
+};
 
 const HomePage = () => {
   return (
@@ -24,7 +39,7 @@ const HomePage = () => {
           <div className="flex flex-wrap items-center gap-4 pt-4">
             <button className="bg-secondary text-white text-sm font-bold px-8 py-4 rounded-lg hover:shadow-[0_0_20px_rgba(75,65,225,0.5)] transition-all flex items-center gap-2 active:scale-95" suppressHydrationWarning>
               Explore Solutions
-              <span className="material-symbols-outlined">arrow_forward</span>
+              <FaArrowRight size={16} />
             </button>
 
             <button className="bg-transparent border border-outline text-on-surface text-sm font-bold px-8 py-4 rounded-lg hover:bg-surface-variant transition-colors active:scale-95" suppressHydrationWarning>
@@ -47,7 +62,7 @@ const HomePage = () => {
             {/* <div className="absolute -bottom-8 -left-8 bg-white/70 backdrop-blur-xl border border-white/50 p-6 rounded-xl shadow-premium w-[280px] hidden md:block animate-float">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-white">
-                  <span className="material-symbols-outlined">security</span>
+                  <MdSecurity size={24} />
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-on-background">System Status</h4>
@@ -118,7 +133,7 @@ const HomePage = () => {
           ].map((service, index) => (
             <div key={index} className="bg-white border border-surface-variant rounded-xl p-8 hover:shadow-modern transition-all flex flex-col items-center text-center gap-6 group hover:-translate-y-1">
               <div className="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center border border-surface-variant group-hover:bg-secondary/5 transition-colors">
-                <span className="material-symbols-outlined text-secondary text-3xl">{service.icon}</span>
+                {iconMap[service.icon] || <MdWeb className="text-secondary text-3xl" />}
               </div>
               <div>
                 <h3 className="font-display text-sm font-bold text-on-background mb-2">{service.title}</h3>
@@ -134,15 +149,15 @@ const HomePage = () => {
         <div className="flex flex-col gap-4 text-center mx-auto">
           <h2 className="font-display text-2xl font-bold text-on-background">Technologies Used By Us</h2>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
           {Array.from({ length: 19 }).map((_, i) => (
-            <div key={i} className="relative w-32 h-16 transition-all hover:scale-110">
+            <div key={i} className="relative w-40 h-20 transition-all hover:scale-110">
               <Image 
                 alt={`Technology ${i + 1}`}
                 className="object-contain"
                 src={`/images/tech/img${i + 1}.png`}
                 fill
-                sizes="128px"
+                sizes="160px"
               />
             </div>
           ))}

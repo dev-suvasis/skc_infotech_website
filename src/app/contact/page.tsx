@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { FaPhoneAlt, FaArrowRight } from 'react-icons/fa';
+import { MdLocationOn, MdEmail } from 'react-icons/md';
 
 
 const ContactPage = () => {
@@ -36,7 +38,7 @@ const ContactPage = () => {
               <div className="space-y-8 relative z-10">
                 <div className="flex items-start gap-4">
                   <div className="bg-surface-container-low p-3 rounded-lg text-secondary">
-                    <span className="material-symbols-outlined">location_on</span>
+                    <MdLocationOn size={24} />
                   </div>
                   <div>
                     <h4 className="text-[14px] font-bold text-on-background mb-1">Office</h4>
@@ -47,7 +49,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-surface-container-low p-3 rounded-lg text-secondary">
-                    <span className="material-symbols-outlined">call</span>
+                    <FaPhoneAlt size={20} />
                   </div>
                   <div>
                     <h4 className="text-[14px] font-bold text-on-background mb-1">Phone</h4>
@@ -56,7 +58,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-surface-container-low p-3 rounded-lg text-secondary">
-                    <span className="material-symbols-outlined">mail</span>
+                    <MdEmail size={24} />
                   </div>
                   <div>
                     <h4 className="text-[14px] font-bold text-on-background mb-1">Email</h4>
@@ -144,7 +146,7 @@ const ContactPage = () => {
             <h4 className="text-[14px] font-bold text-on-background mb-2">Visit Us</h4>
             <p className="text-[14px] text-on-surface-variant mb-4 leading-relaxed">21/4, K.B. Basu Road, Barasat, Kolkata-700124</p>
             <a className="inline-flex items-center text-secondary text-[14px] font-bold hover:gap-2 transition-all" href="#">
-              Get Directions <span className="material-symbols-outlined ml-1 text-[18px]">arrow_forward</span>
+              Get Directions <FaArrowRight size={18} className="ml-1" />
             </a>
           </div>
         </div>

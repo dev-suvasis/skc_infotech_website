@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { FaArrowRight, FaLaptop } from 'react-icons/fa';
+import { MdWeb, MdDashboard, MdDesignServices } from 'react-icons/md';
 
 
 const WebsitePage = () => {
@@ -58,12 +60,12 @@ const WebsitePage = () => {
             {/* Enterprise Web Apps */}
             <div className="md:col-span-8 bg-white border border-outline-variant/30 rounded-xl p-8 relative overflow-hidden group shadow-modern hover:shadow-premium transition-all duration-300">
               <div className="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <span className="material-symbols-outlined text-[120px] text-secondary">computer</span>
+                <FaLaptop className="text-[120px] text-secondary opacity-10" />
               </div>
               <div className="h-full flex flex-col justify-between relative z-10">
                 <div>
                   <span className="inline-block p-3 bg-secondary/5 text-secondary rounded-lg mb-6">
-                    <span className="material-symbols-outlined">web</span>
+                    <MdWeb size={24} />
                   </span>
                   <h3 className="text-[24px] font-semibold text-on-background mb-3">Web Application</h3>
                   <p className="text-[16px] text-on-surface-variant max-w-md leading-[1.6]">
@@ -71,7 +73,7 @@ const WebsitePage = () => {
                   </p>
                 </div>
                 <Link href="/about" className="text-secondary font-bold text-[14px] flex items-center gap-2 w-fit hover:gap-3 transition-all">
-                  View Case Studies <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                  View Case Studies <FaArrowRight size={18} />
                 </Link>
               </div>
             </div>
@@ -82,7 +84,7 @@ const WebsitePage = () => {
               <div className="h-full flex flex-col justify-between relative z-10">
                 <div>
                   <span className="inline-block p-3 bg-surface-container-high text-on-surface rounded-lg mb-6">
-                    <span className="material-symbols-outlined">dashboard</span>
+                    <MdDashboard size={24} />
                   </span>
                   <h3 className="text-[24px] font-semibold text-on-background mb-3">Software Development</h3>
                   <p className="text-[14px] text-on-surface-variant leading-[1.6]">
@@ -97,7 +99,7 @@ const WebsitePage = () => {
               <div className="h-full flex flex-col justify-between relative z-10">
                 <div>
                   <span className="inline-block p-3 bg-surface-container-high text-on-surface rounded-lg mb-6">
-                    <span className="material-symbols-outlined">design_services</span>
+                    <MdDesignServices size={24} />
                   </span>
                   <h3 className="text-[24px] font-semibold text-on-background mb-3">Customized Website</h3>
                   <p className="text-[14px] text-on-surface-variant leading-[1.6]">
@@ -190,7 +192,7 @@ const WebsitePage = () => {
                     {product.desc}
                   </p>
                   <Link href="/contact" className="text-secondary font-bold text-[14px] flex items-center gap-2 w-fit hover:gap-3 transition-all">
-                    View Project <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    View Project <FaArrowRight size={18} />
                   </Link>
                 </div>
               </div>

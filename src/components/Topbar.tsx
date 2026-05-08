@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { MdEmail, MdLanguage } from 'react-icons/md';
 
 const Topbar = () => {
   return (
@@ -9,21 +11,21 @@ const Topbar = () => {
       <div className="flex justify-between items-center w-full px-8 max-w-7xl mx-auto">
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2 text-slate-300">
-            <span className="material-symbols-outlined text-[16px]">call</span>
+            <FaPhoneAlt size={16} className="text-slate-300" />
             <span>+91 9830048230 / +91 9674635687</span>
           </div>
         </div>
         
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2 text-slate-300">
-            <span className="material-symbols-outlined text-[16px]">mail</span>
+            <MdEmail size={16} className="text-slate-300" />
             <span>info@skcinfotech.in / support@skcinfotech.in</span>
           </div>
           {/* <nav className="flex items-center gap-6 border-l border-white/10 pl-8 ml-2">
             <Link className="text-slate-300 hover:text-white transition-colors" href="/contact">Support</Link>
             <Link className="text-slate-300 hover:text-white transition-colors" href="/about">Docs</Link>
             <button className="text-slate-300 hover:text-white transition-colors flex items-center justify-center" suppressHydrationWarning>
-              <span className="material-symbols-outlined text-[16px]">language</span>
+              <MdLanguage size={16} />
             </button>
           </nav> */}
         </div>

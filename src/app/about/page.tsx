@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { MdOutlineWorkOutline , MdVerified, MdWorkspacePremium, MdHandshake, MdHub } from 'react-icons/md';
 
 
 
@@ -42,7 +43,7 @@ const AboutPage = () => {
               {/* Glassmorphic floating element */}
               {/* <div className="absolute bottom-8 left-8 right-8 bg-white/70 backdrop-blur-xl border border-white/50 p-6 rounded-lg shadow-premium animate-float">
                 <div className="flex items-center gap-4">
-                  <span className="material-symbols-outlined text-secondary text-3xl">hub</span>
+                  <MdHub size={30} className="text-secondary" />
                   <div>
                     <p className="font-sans text-[14px] font-bold text-on-background">Global Infrastructure</p>
                     <p className="font-sans text-[12px] text-on-surface-variant">99.999% Uptime SLA</p>
@@ -66,10 +67,10 @@ const AboutPage = () => {
             {/* Value Card 1 (Large) */}
             <div className="md:col-span-2 bg-background border border-outline-variant/30 rounded-xl p-8 relative overflow-hidden group hover:shadow-[0_12px_40px_rgba(15,23,42,0.05)] transition-all duration-300">
               <div className="absolute -top-12 -right-12 opacity-[0.15] group-hover:opacity-25 transition-opacity pointer-events-none select-none">
-                <span className="material-symbols-outlined text-[240px] text-secondary">work</span>
+                <MdOutlineWorkOutline  className="text-[240px] text-secondary opacity-[0.15] group-hover:opacity-25 transition-opacity pointer-events-none select-none" />
               </div>
               <div className="relative z-10 flex flex-col h-full justify-between">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-4">work</span>
+                <MdOutlineWorkOutline  className="text-secondary text-4xl mb-4" />
                 <div>
                   <h3 className="font-display text-[32px] font-semibold text-on-background mb-3 leading-[1.3]">Expertise and Experience</h3>
                   <p className="font-body text-[16px] text-on-surface-variant max-w-md leading-[1.6]">
@@ -82,7 +83,7 @@ const AboutPage = () => {
             {/* Value Card 2 */}
             <div className="bg-background border border-outline-variant/30 rounded-xl p-8 relative overflow-hidden hover:shadow-[0_12px_40px_rgba(15,23,42,0.05)] transition-all duration-300">
               <div className="flex flex-col h-full justify-between">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-4">verified</span>
+                <MdVerified className="text-secondary text-4xl mb-4" />
                 <div>
                   <h3 className="font-display text-[24px] font-semibold text-on-background mb-2 leading-[1.3]">Reliability and Consistency</h3>
                   <p className="font-body text-[14px] text-on-surface-variant leading-[1.6]">
@@ -95,7 +96,7 @@ const AboutPage = () => {
             {/* Value Card 3 */}
             <div className="bg-background border border-outline-variant/30 rounded-xl p-8 relative overflow-hidden hover:shadow-[0_12px_40px_rgba(15,23,42,0.05)] transition-all duration-300">
               <div className="flex flex-col h-full justify-between">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-4">workspace_premium</span>
+                <MdWorkspacePremium className="text-secondary text-4xl mb-4" />
                 <div>
                   <h3 className="font-display text-[24px] font-semibold text-on-background mb-2 leading-[1.3]">Quality Workmanship</h3>
                   <p className="font-body text-[14px] text-on-surface-variant leading-[1.6]">
@@ -109,7 +110,7 @@ const AboutPage = () => {
             <div className="md:col-span-2 bg-white border border-outline-variant/30 rounded-xl p-8 relative overflow-hidden group hover:shadow-[0_12px_40px_rgba(15,23,42,0.05)] transition-all duration-300">
               <div className="absolute inset-0 bg-linear-to-br from-secondary/5 to-transparent"></div>
               <div className="relative z-10 flex flex-col h-full justify-between">
-                <span className="material-symbols-outlined text-secondary text-4xl mb-4">handshake</span>
+                <MdHandshake className="text-secondary text-4xl mb-4" />
                 <div>
                   <h3 className="font-display text-[32px] font-semibold text-on-background mb-3 leading-[1.3]">Ethical Practices</h3>
                   <p className="font-body text-[16px] text-on-surface-variant max-w-md leading-[1.6]">

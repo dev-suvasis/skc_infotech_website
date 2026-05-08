@@ -2,6 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { FaArrowRight, FaUsers, FaBoxes } from 'react-icons/fa';
+import { MdInventory2, MdSupportAgent, MdAccountBalance, MdAnalytics, MdSecurity } from 'react-icons/md';
+
+const iconMap: Record<string, React.ReactNode> = {
+  inventory_2: <MdInventory2 size={24} />,
+  groups: <FaUsers size={24} />,
+  support_agent: <MdSupportAgent size={24} />,
+  account_balance: <MdAccountBalance size={24} />,
+  analytics: <MdAnalytics size={24} />,
+  security: <MdSecurity size={24} />,
+};
 
 
 const SoftwarePage = () => {
@@ -100,7 +111,7 @@ const SoftwarePage = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-linear-to-bl from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-bl-full"></div>
                 
                 <div className="w-12 h-12 bg-surface-container-low rounded-lg flex items-center justify-center mb-6 border border-outline-variant/20 text-secondary">
-                  <span className="material-symbols-outlined text-[24px]">{product.icon}</span>
+                  {iconMap[product.icon] || <MdSecurity size={24} />}
                 </div>
                 
                 <h3 className="text-[24px] font-semibold text-on-background mb-3 leading-[1.3]">{product.title}</h3>
@@ -120,7 +131,7 @@ const SoftwarePage = () => {
                 </div>
                 
                 <Link className="text-[14px] font-bold text-secondary flex items-center gap-2 hover:gap-3 transition-all w-fit" href="/contact">
-                  View Product <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  View Product <FaArrowRight size={16} />
                 </Link>
               </div>
             ))}

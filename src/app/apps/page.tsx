@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { FaMobileAlt, FaAndroid, FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { MdPhoneIphone, MdDevices } from 'react-icons/md';
 
 
 const AppsPage = () => {
@@ -120,42 +122,42 @@ const AppsPage = () => {
             {/* iOS Card */}
             <div className="bg-white border border-outline-variant/30 rounded-xl p-8 shadow-modern flex flex-col items-start hover:-translate-y-1 transition-all duration-300">
               <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-on-background">
-                <span className="material-symbols-outlined text-[28px]">phone_iphone</span>
+                <MdPhoneIphone size={28} />
               </div>
               <h3 className="text-[32px] font-semibold text-on-background mb-3 leading-[1.3]">iOS Native</h3>
               <p className="text-[16px] text-on-surface-variant grow mb-6 leading-[1.6]">
                 High-performance Swift and Objective-C applications tailored for the Apple ecosystem, ensuring seamless integration with iOS guidelines.
               </p>
               <Link className="text-[14px] font-bold text-secondary flex items-center gap-1 hover:underline mt-auto" href="/contact">
-                Explore iOS <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                Explore iOS <FaArrowRight size={16} />
               </Link>
             </div>
 
             {/* Android Card */}
             <div className="bg-white border border-outline-variant/30 rounded-xl p-8 shadow-modern flex flex-col items-start hover:-translate-y-1 transition-all duration-300">
               <div className="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-6 text-on-background">
-                <span className="material-symbols-outlined text-[28px]">android</span>
+                <FaAndroid size={28} />
               </div>
               <h3 className="text-[32px] font-semibold text-on-background mb-3 leading-[1.3]">Android Native</h3>
               <p className="text-[16px] text-on-surface-variant grow mb-6 leading-[1.6]">
                 Scalable Kotlin and Java solutions optimized for the diverse range of Android devices, focusing on memory management and performance.
               </p>
               <Link className="text-[14px] font-bold text-secondary flex items-center gap-1 hover:underline mt-auto" href="/contact">
-                Explore Android <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                Explore Android <FaArrowRight size={16} />
               </Link>
             </div>
 
             {/* Cross-Platform Card */}
             <div className="bg-primary-container text-white border border-outline-variant/10 rounded-xl p-8 shadow-modern flex flex-col items-start hover:-translate-y-1 transition-all duration-300">
               <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-6 text-white">
-                <span className="material-symbols-outlined text-[28px]">devices</span>
+                <MdDevices size={28} />
               </div>
               <h3 className="text-[32px] font-semibold text-white mb-3 leading-[1.3]">Cross-Platform</h3>
               <p className="text-[16px] text-white/80 grow mb-6 leading-[1.6]">
                 Unified codebases using React Native or Flutter to accelerate time-to-market while maintaining near-native performance and UX.
               </p>
               <Link className="text-[14px] font-bold text-secondary-fixed flex items-center gap-1 hover:underline mt-auto" href="/contact">
-                Explore Hybrid <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                Explore Hybrid <FaArrowRight size={16} />
               </Link>
             </div>
           </div>
@@ -211,7 +213,7 @@ const AppsPage = () => {
               className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white border border-outline-variant/30 rounded-full shadow-lg z-30 hover:bg-secondary hover:text-white transition-all cursor-pointer active:scale-90"
               suppressHydrationWarning
             >
-              <span className="material-symbols-outlined">chevron_left</span>
+              <FaChevronLeft />
             </button>
             <button
               type="button"
@@ -220,7 +222,7 @@ const AppsPage = () => {
               className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white border border-outline-variant/30 rounded-full shadow-lg z-30 hover:bg-secondary hover:text-white transition-all cursor-pointer active:scale-90"
               suppressHydrationWarning
             >
-              <span className="material-symbols-outlined">chevron_right</span>
+              <FaChevronRight />
             </button>
 
 

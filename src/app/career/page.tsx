@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { FaGraduationCap, FaHeart } from 'react-icons/fa';
+import { MdArchitecture, MdSchool, MdPublic, MdCategory, MdLocationOn, MdSchedule, MdWork, MdDesignServices } from 'react-icons/md';
 
 
 const CareerPage = () => {
@@ -69,7 +71,7 @@ const CareerPage = () => {
               />
 
               <div className="relative z-20 flex flex-col gap-2 text-white">
-                <span className="material-symbols-outlined text-3xl">architecture</span>
+                <MdArchitecture className="text-3xl" />
                 <h3 className="text-[32px] font-semibold">State-of-the-art Workspaces</h3>
                 <p className="text-[16px] text-white/80">Designed for deep focus and dynamic collaboration.</p>
               </div>
@@ -78,7 +80,7 @@ const CareerPage = () => {
             {/* Bento Item 2 */}
             <div className="bg-white border border-outline-variant/30 rounded-xl shadow-modern p-8 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-12 h-12 rounded-lg bg-secondary/5 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">school</span>
+                <MdSchool size={24} />
               </div>
               <h3 className="text-[24px] font-semibold text-on-background mt-auto">Continuous Learning</h3>
               <p className="text-[14px] text-on-surface-variant leading-[1.6]">Generous stipends for courses, conferences, and certifications.</p>
@@ -87,7 +89,7 @@ const CareerPage = () => {
             {/* Bento Item 3 */}
             <div className="bg-white border border-outline-variant/30 rounded-xl shadow-modern p-8 flex flex-col gap-4 hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-12 h-12 rounded-lg bg-secondary/5 flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined">public</span>
+                <MdPublic size={24} />
               </div>
               <h3 className="text-[24px] font-semibold text-on-background mt-auto">Remote-First Flexibility</h3>
               <p className="text-[14px] text-on-surface-variant leading-[1.6]">Work from anywhere. We value outcomes over hours.</p>
@@ -96,7 +98,7 @@ const CareerPage = () => {
             {/* Bento Item 4 */}
             <div className="md:col-span-2 bg-secondary text-white border border-secondary rounded-xl shadow-premium p-8 flex flex-col justify-between relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[50px] rounded-full -translate-y-1/2 translate-x-1/4"></div>
-              <span className="material-symbols-outlined text-4xl text-white/80 group-hover:scale-110 transition-transform">favorite</span>
+              <FaHeart className="text-4xl text-white/80 group-hover:scale-110 transition-transform" />
               <div className="flex flex-col gap-2 relative z-10">
                 <h3 className="text-[32px] font-semibold">Comprehensive Wellness</h3>
                 <p className="text-[16px] text-white/80 max-w-md">Premium health coverage, mental health days, and robust family leave policies.</p>
@@ -163,9 +165,9 @@ const CareerPage = () => {
                 <div className="flex flex-col gap-2">
                   <h4 className="text-[24px] font-semibold text-on-background group-hover:text-secondary transition-colors">{job.title}</h4>
                   <div className="flex flex-wrap gap-4 text-[14px] text-on-surface-variant">
-                    <span className="flex items-center gap-1.5"><span className="material-symbols-outlined text-[18px] opacity-70">category</span> {job.dept}</span>
-                    <span className="flex items-center gap-1.5"><span className="material-symbols-outlined text-[18px] opacity-70">location_on</span> {job.loc}</span>
-                    <span className="flex items-center gap-1.5"><span className="material-symbols-outlined text-[18px] opacity-70">schedule</span> {job.type}</span>
+                    <span className="flex items-center gap-1.5"><MdCategory size={18} className="opacity-70" /> {job.dept}</span>
+                    <span className="flex items-center gap-1.5"><MdLocationOn size={18} className="opacity-70" /> {job.loc}</span>
+                    <span className="flex items-center gap-1.5"><MdSchedule size={18} className="opacity-70" /> {job.type}</span>
                   </div>
                 </div>
                 <button className="bg-transparent border border-outline text-on-background px-6 py-2 rounded-lg text-[14px] font-bold group-hover:bg-secondary group-hover:text-white group-hover:border-secondary transition-all active:scale-95" suppressHydrationWarning>

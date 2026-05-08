@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Typewriter from '@/components/Typewriter';
+import { FaArrowRight, FaLaptop, FaQuoteLeft } from 'react-icons/fa';
+import { MdVerified } from 'react-icons/md';
 
 
 import Counter from '@/components/Counter';
@@ -30,7 +32,7 @@ const ClientPage = () => {
             <div className="flex space-x-4 pt-4">
               <button className="bg-secondary text-white px-8 py-3 rounded-lg text-[14px] font-bold hover:shadow-[0_0_20px_rgba(75,65,225,0.4)] transition-all flex items-center space-x-2 active:scale-95" suppressHydrationWarning>
                 <span>Read Case Studies</span>
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                <FaArrowRight size={18} />
               </button>
 
             </div>
@@ -47,7 +49,7 @@ const ClientPage = () => {
             {/* Mockup overlay */}
             <div className="absolute bottom-8 right-8 bg-white p-6 rounded-lg shadow-premium z-20 border border-outline-variant/30 max-w-62.5 animate-float">
               <div className="flex items-center space-x-3 mb-4">
-                <span className="material-symbols-outlined text-secondary text-[24px]">verified</span>
+                <MdVerified className="text-secondary text-[24px]" />
                 <span className="text-[14px] font-bold text-on-surface">280+ Happy Clients</span>
               </div>
               <div className="h-2 w-full bg-surface-container rounded-full overflow-hidden">
@@ -91,7 +93,7 @@ const ClientPage = () => {
                 </div>
                 <a className="text-[14px] font-bold text-secondary flex items-center space-x-1 mt-6 hover:gap-2 transition-all" href="#">
                   <span>View Portfolio</span>
-                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                  <FaArrowRight size={18} />
                 </a>
               </div>
             </div>
@@ -99,7 +101,7 @@ const ClientPage = () => {
             {/* Secondary Case Study */}
             <div className="md:col-span-4 md:row-span-1 rounded-xl bg-white border border-outline-variant/30 p-8 shadow-modern hover:shadow-premium transition-all flex flex-col justify-between relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-10">
-                <span className="material-symbols-outlined text-[64px] text-secondary">computer</span>
+                <FaLaptop className="text-[64px] text-secondary" />
               </div>
               <div>
                 <div className="mb-4">
@@ -144,7 +146,7 @@ const ClientPage = () => {
         <div className="absolute inset-0 bg-surface-container-low/50 rounded-3xl -z-10 transform -skew-y-1 scale-105"></div>
         <div className="max-w-305 mx-auto">
           <div className="text-center mb-16 animate-slide-up">
-            <span className="material-symbols-outlined text-[32px] text-secondary mb-4 block">format_quote</span>
+            <FaQuoteLeft className="text-[32px] text-secondary mb-4 block" />
             <h2 className="text-[48px] font-bold text-on-background leading-[1.2] tracking-[-0.02em]">Client Perspectives</h2>
           </div>
           
@@ -165,7 +167,7 @@ const ClientPage = () => {
             ].map((t, i) => (
               <div key={i} className={`bg-white/70 backdrop-blur-xl border border-white/50 rounded-2xl p-8 shadow-modern relative ${i === 1 ? 'md:mt-12' : ''}`}>
                 <div className="absolute -top-6 -left-6">
-                  <span className="material-symbols-outlined text-[48px] text-secondary/10">format_quote</span>
+                  <FaQuoteLeft className="text-[48px] text-secondary/10" />
                 </div>
                 <p className="text-[18px] text-on-surface-variant italic mb-8 relative z-10 leading-relaxed font-medium">
                   "{t.quote}"
